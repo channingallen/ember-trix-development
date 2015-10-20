@@ -1,3 +1,16 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">And then there was one.</h2>
 
-{{outlet}}
+{{trix-editor attachmentsDisabled=false
+              autofocus=true
+              editorClass="my-class"
+              inputId="hello"
+              placeholder="Enter text here!"
+              trix-attachment-add=(action "handleTrixAttachmentAdd")
+              trix-attachment-remove=(action "handleTrixAttachmentRemove")
+              trix-blur=(action "handleTrixBlur")
+              trix-change=(action "handleTrixChange")
+              trix-file-accept=(action "handleTrixFileAccept")
+              trix-focus=(action "handleTrixFocus")
+              trix-initialize=(action "handleTrixInitialize")
+              trix-selection-change=(action "handleTrixSelectionChange")
+              value="Initial value"}}
